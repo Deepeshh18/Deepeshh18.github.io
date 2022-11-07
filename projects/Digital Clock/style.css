@@ -1,0 +1,131 @@
+@import url("httpa://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+ 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins" ,sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #2f363e;
+}
+.container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 20px;
+    border-top-left-radius: 225px;
+    border-top-right-radius: 225px;
+    box-shadow: 25px 25px 75px rgba(0,0,0,0.75),
+    10px 50px 70px rgba(0,0,0,0.25), 
+    inset 5px 5px 10px rgba(0,0,0,0.25),
+    inset 5px 5px 20px rgba(255,255,255,0.2),
+    inset -5px -5px 15px rgba(0,0,0,0.75);
+    background: #2f363e;
+}
+
+.clock{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    box-shadow: 10px 50px 70px rgba(0,0,0,0.25),
+    5px 5px 10px rgba(0,0,0,0.25), 
+    inset 5px 5px 10px rgba(0,0,0,0.25),
+    inset 5px 5px 20px rgba(255,255,255,0.2),
+    inset -5px -5px 15px rgba(0,0,0,0.75);
+    /* box-shadow: 10px 50px 70px rgba(0,0,0,0.25),
+    5px 5px 10px rgba(0,0,0,0.25),
+    inset 5px 5px 5px  gray,
+    inset 5px 5px 20px  black,
+    inset -5px -5px 15px  gray; */
+    background: #2f363e;
+}
+.clock::before{
+    content: "";
+    position: absolute;
+    z-index: 100000;
+    width: 8px;
+    height: 8px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    background: #2f363e;
+}
+
+.clock span{
+    position: absolute;
+    inset: 20px;
+    color: #fff;
+    text-align: center;
+    transform: rotate(calc(30deg * var(--i)));
+    /* 360 /12 = 30deg */
+}
+
+.circle{
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 300px;
+    height: 300px;
+    border:2px solid rgba(0,0,0,0.25);
+    border-radius: 50%;
+}
+
+.circle i{
+    position: absolute;
+    width: 6px;
+    height: 50%;
+    background: var(--clr);
+    opacity: 0.75;
+    transform-origin: bottom;
+    transform: scaleY(0.5);
+}
+
+.circle:nth-child(1) i{
+    width:2px;
+    
+}
+circle:nth-child(2) i{
+    width: 6px;
+}
+.circle2{
+    z-index: 9;
+    width: 240px;
+    height: 240px;
+}
+.circle3{
+    z-index: 8;
+    width: 180px;
+    height: 180px;
+}
+
+.circle::before{
+    content: "";
+    position: absolute;
+    top: -8.5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px var(--clr);
+    background: var(--clr);
+}
+@keyframes animate {
+    0% {
+        opacity: 1;
+
+    }
+    50% {
+        opacity: 0;
+    }
+}

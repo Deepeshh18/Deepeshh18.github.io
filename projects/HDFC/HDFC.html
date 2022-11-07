@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+    <style>
+      @media screen and (orientation: landscape) {
+        .card_view_amount {
+          width: 39%;
+        }
+        .card_view {
+          width: 29%;
+        }
+        .calculation_button {
+          width: 30%;
+        }
+      }
+      @media screen and (orientation: portrait) {
+        .card_view_amount {
+          width: 100%;
+        }
+        .card_view {
+          width: 100%;
+        }
+        .calculation_button {
+          width: 70%;
+        }
+      }
+    </style>
+    <script>
+      var details = {
+        amount: 50000,
+        time: 1,
+        rate: 10.5,
+      };
+      function amountChange() {
+        var amount = parseInt(document.getElementById("amountRange").value);
+        document.getElementById("txtAmount").value = amount;
+        details.amount = amount;
+      }
+      function timeChange() {
+        var time = parseInt(document.getElementById("timeRange").value);
+        document.getElementById("txtTime").value = time;
+        details.time = time;
+      }
+      function rateChange() {
+        var rate = parseFloat(document.getElementById("rateRange").value);
+        document.getElementById("txtRate").value = rate;
+        details.rate = rate;
+      }
+      function calculateClick() {
+        var p = details.amount;
+
+        // converting the rate of intrest annualy to monthly
+        var r = details.rate / 1200;
+
+        // converting the time period annualy to monthly
+        var t = details.time * 12;
+
+        // EMI calculation formula
+        var EMI = (p * r * [(r + 1) ** t]) / [(r + 1) ** t - 1];
+
+        // EMI calculated for HDFC Bank increases ites flot value to 1
+        EMI = parseInt(EMI) + 1;
+
+        document.getElementById("emiAmount").value = EMI;
+      }
+    </script>
+  </head>
+  <body class="bg-info bg-dark">
+    <h2 class="bg-info bg-blue p-1 mb-2 text-center">
+      Personal Loan Calculator
+    </h2>
+    <!-- card view calculator -->
+    <div class="container-fluid p-2">
+      <div class="d-flex flex-wrap">
+        <!-- card view amount -->
+        <div class="card_view_amount p-3">
+          <div class="d-flex justify-content-between">
+            <div class="btn btn-light">
+              <label>Amount you need</label>
+            </div>
+            <div>
+              <input
+                id="txtAmount"
+                class="form-control"
+                type="text"
+                value="40,000"
+              />
+            </div>
+          </div>
+          <div class="mt-2">
+            <input
+              onchange="amountChange()"
+              id="amountRange"
+              type="range"
+              class="form-range"
+              min="50000"
+              max="4000000"
+              value="50000"
+              step="10000"
+            />
+          </div>
+          <div class="d-flex justify-content-between mt-2" aria-colspan="">
+            <div class="btn btn-light">&#8377;40,000</div>
+            <div class="btn btn-light">&#8377; 3,90,000</div>
+          </div>
+        </div>
+
+        <!-- card view time period -->
+        <div class="card_view p-3">
+          <div class="d-flex justify-content-start">
+            <div class="me-2">
+              <label class="btn btn-light">for</label>
+            </div>
+            <div>
+              <input id="txtTime" class="form-control" type="text" value="1" />
+            </div>
+            <div class="ms-2">
+              <label class="btn btn-light">years</label>
+            </div>
+          </div>
+          <div class="mt-2">
+            <input
+              onchange="timeChange()"
+              id="timeRange"
+              type="range"
+              class="form-range"
+              min="1"
+              max="5"
+              value="1"
+              step="1"
+            />
+          </div>
+          <div class="d-flex justify-content-between mt-2">
+            <div class="btn btn-light">1 year</div>
+            <div class="btn btn-light">5 year</div>
+          </div>
+        </div>
+
+        <!-- card view rate of intrest -->
+        <div class="card_view p-3">
+          <div class="d-flex justify-content-start">
+            <div class="me-2">
+              <label class="btn btn-light">Intrest rate of</label>
+            </div>
+            <div>
+              <input
+                id="txtRate"
+                class="form-control"
+                type="text"
+                value="10.5"
+              />
+            </div>
+            <div class="ms-2">
+              <label class="btn btn-light">%</label>
+            </div>
+          </div>
+          <div class="mt-2">
+            <input
+              onchange="rateChange()"
+              id="rateRange"
+              type="range"
+              class="form-range"
+              min="10.5"
+              max="21"
+              value="10.50"
+              step="0.10"
+            />
+          </div>
+          <div class="d-flex justify-content-between mt-2">
+            <div class="btn btn-light">10.5 %</div>
+            <div class="btn btn-light">21 %</div>
+          </div>
+        </div>
+      </div>
+      <hr />
+
+      <!-- calculation area -->
+      <div class="d-flex justify-content-center mt-3">
+        <div class="calculation_button">
+          <div>
+            <input
+              id="emiAmount"
+              class="form-control text-center"
+              type="text"
+            />
+          </div>
+          <div class="mt-2">
+            <button onclick="calculateClick()" class="btn btn-success w-100">
+              Calculate
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analog and digital clock design</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="clock">
+            <div class="circle" id="sc" style="--clr: #04fc43"><i></i></div>
+            <div class="circle circle2" id="mn" style="--clr: #fee800"><i></i></div>
+            <div class="circle circle3" id="hr" style="--clr: #ff2972"><i></i></div>
+             <span style="--i: 1"><b>1</b></span>
+             <span style="--i: 2"><b>2</b></span>
+             <span style="--i: 3"><b>3</b></span>
+             <span style="--i: 4"><b>4</b></span>
+             <span style="--i: 5"><b>5</b></span>
+             <span style="--i: 6"><b>6</b></span>
+             <span style="--i: 7"><b>7</b></span>
+             <span style="--i: 8"><b>8</b></span>
+             <span style="--i: 9"><b>9</b></span>
+             <span style="--i: 10"><b>10</b></span>
+             <span style="--i: 11"><b>11</b></span>
+             <span style="--i2: 12"><b>12</b></span>
+          </div>
+        </div>
+        <script>
+
+            let a = new Date().getFullYear();
+             document.getElementById("dood").innerHTML = a;
+     
+             let d = new Date();
+             document.getElementById("demo").innerHTML = d;
+    
+    
+             setInterval(showTime, 1000);
+            function showTime() {
+                let time = new Date();
+                let hour = time.getHours();
+                let min = time.getMinutes();
+                let sec = time.getSeconds();
+                am_pm = "AM";
+     
+               if (hour > 12) {
+                    hour -= 12;
+                    am_pm = "PM";
+                }
+                if (hour == 0) {
+                    hr = 12;
+                    am_pm = "AM";
+                }
+     
+                hour = hour < 10 ? "0" + hour : hour;
+                min = min < 10 ? "0" + min : min;
+                sec = sec < 10 ? "0" + sec : sec;
+     
+                let currentTime = hour + ":"
+                    + min + ":" + sec + am_pm;
+     
+                document.getElementById("time")
+                    .innerHTML = currentTime;
+            }
+     
+            showTime();
+     
+        </script>
+        <!--digital clock-->
+    <script src="js/app.js"></script>
+</body>
+</html>
