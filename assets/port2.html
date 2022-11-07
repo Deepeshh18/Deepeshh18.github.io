@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deepesh Yadav - Portfolio</title>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+ <style>
+  @import url("https://fonts.googleapis.com/css2?family=Hubballi&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap");
+.container {
+  display: flex;
+  background-color: rgba(255, 255, 255, .15); 
+}
+.sidebar {
+  background-color:rgb(192, 180, 180);
+  font-family: "Hubballi", cursive;
+  /* width: 250px; */
+  height: 100vh;
+  /* backdrop-filter: blur(10px); */
+  
+}
+
+.main{
+  /* background-image: url(bg.jpg); */
+  background-color: white;
+}
+
+.sidebar nav {
+  padding: 50px;
+}
+.sidebar nav li {
+  font-size: 30px;
+  list-style-type: none;
+  padding: 33px 0;
+ 
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  width: 85vw;
+  /* background-color: blue; */
+  display: flex;
+}
+
+.infoContainer {
+  height: 65vh;
+  width: 80vw;
+  margin: 120px auto;
+  /* background-color: green; */
+  display: flex;
+  justify-content: space-around;
+}
+
+.devPic img {
+  height: 75vh;
+  width: 300px;
+  border-radius: 10px;
+ 
+}
+
+.devInfo {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Hubballi", cursive;
+}
+.hello {
+  font-size: 75px;
+ 
+}
+.name {
+  font-size: 55px;
+  font-weight: bold;
+  font-family: "Hubballi", sans-serif;
+}
+.about {
+  font-size: 45px;
+}
+
+.moreabt{
+    font-size: 25px;
+    margin-top: 15px;
+
+}
+.btn{
+    margin-top: 30px;
+}
+.btn button {
+    color: white;
+    background-color: black;
+    border-radius: 22px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+
+.btn button:hover {
+    color: black;
+    background-color: white;
+
+}
+.sidebar nav li a{
+
+text-decoration: none;
+color: whitesmoke;
+}
+
+
+
+
+/* Blog css */
+
+
+.blogItem{
+  margin: 30px;
+}
+
+
+.blogItem h2{
+  margin: 10px 0;
+}
+
+
+.blockContainer h1{
+  margin: 30px;
+  
+}
+
+.infoContainer{
+  /* background-color: ; */
+  /* background-color: red; */
+  backdrop-filter: blur(100px);
+  border-radius: 25px;
+}
+.devInfo{
+  padding: 10px;
+}
+
+
+
+.skillContainer
+{
+padding: 12px;
+
+}
+
+.skill{
+  width: 400px;
+  height: 10px;
+  background-color: red;
+  border: 3px solid black;
+  border-radius: 12px;
+}
+
+
+.hund{
+  width: 200px;
+  background-color: green;
+}
+.fif{
+  width: 300px;
+  background-color: yellow;
+}
+.sidebarGo{
+  position: absolute;
+  transform: translate(-400px,0);
+}
+
+
+/* @media (max-width: 1100px) {
+  .sidebar{
+    position: absolute;
+    transform: translate(-400px,0);
+  } 
+  *{
+    background-color: aqua;
+  } 
+  
+}  */
+
+
+.hamburger{
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  cursor: pointer;
+}
+.cross {
+  margin-left: 148px;
+  font-size: 3rem;
+}
+ </style>    
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar sidebarGo">
+        <!-- <span id="click">click</span>  -->
+        <nav>
+          <ul>
+            <li><a href="/"> Home </a></li>
+            <li><a href="/intro.html"> Intro</a></li>
+            <li><a href="/Services.html"> Services </a></li>  
+            <li><a href="/blog.html"> Blog </a></li>  
+            <li><a href="/contact.html"> Contact </a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="main">
+        <!-- <div class="hamburger">
+          <div class="ham"><img src="ham.jpg" alt="ham" width="40px"></div>
+          <div class="cross"><img src="cross.jpg" alt="cross" width="23px">
+          </div>
+        </div> -->
+        <div class="infoContainer">
+          <div class="devInfo">
+            <div class="hello" id="qwe">Hi I am</div>
+            <div class="name">Deepesh Yadav</div>
+            <div class="about">Web Developer</div>
+            <div class="moreabt">
+              Web development is the building and maintenance of websites; it's the work that happens behind the scenes to make a website look great.
+            </div>
+            <div class="btn">
+              <a href="./Deepesh Yadav Resume.pdf">
+              <button>Download cv</button></a>
+              <a href="./contact.html">
+              <button>Contact me</button></a>
+            </div>
+          </div>
+          <div class="devPic"><img src="../images/IMG-20221028-WA0027-removebg-preview (2).png" alt="Deepesh yadav" /></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>

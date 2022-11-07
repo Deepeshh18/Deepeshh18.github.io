@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      body {
+       background-image: url(./abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-52393.webp);
+      }
+
+      .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        position: relative;
+      }
+      .box {
+        border: none;
+        background-color: whitesmoke;
+        width: 200px;
+        height: 200px;
+        padding: 15px;
+        margin: 15px;
+      }
+      .box img {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+      }
+      .logo {
+        margin: 15px;
+      }
+      .logo a {
+        text-decoration: none;
+      }
+      #card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: lightskyblue;
+        width: 700px;
+        height: 400px;
+        margin: auto;
+      }
+      #card h1{
+        margin-left: 200px;
+        color: darkblue;
+      }
+
+      #card input {
+        width: 500px;
+        margin: 15px;
+        padding: 6px;
+        border-radius: 3px;
+        border: none;
+      }
+      .firstcard {
+        margin: 10px;
+        padding: 15px;
+      }
+  
+      .firstcard button{
+        background: none;
+        border: 2px solid darkblue;
+        color: darkblue;
+        margin: 5px;
+        padding: 5px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      }
+      .firstcard button:hover{
+        cursor: pointer;
+        background-color: darkblue;
+        color: white;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <div class="logo">
+          <img
+            src="./blue-location-icon-26.png"
+            alt=""
+            width="50px"
+            height="50px"
+          />
+          <span><b>Address:</b></span>
+          <a href="#">Khargone(Madhya Pradesh)</a>
+        </div>
+      </div>
+      <div class="box">
+        <img src="./contact.png" alt="" width="50px" height="50px" />
+        <div class="logo">
+          <span><b>Phone Number:</b></span>
+         <a href="tel:+917694076939">7694076939</a>
+          
+        </div>
+      </div>
+      <div class="box">
+        <img src="./email.png" alt="" width="50px" height="50px" />
+        <div class="logo">
+          <span><b>Email:</b></span>
+          <a href="mailto:ydeepesh682@gmail.com">ydeepesh682@gmail.com</a>
+        </div>
+      </div>
+      <div class="box">
+        <img src="./linkdin.png" alt="" width="70px" height="60px" />
+        <div class="logo">
+          <span><b>Linkdin:</b></span><br>
+          <a href="https://www.linkedin.com/in/deepesh-yadav-5b5612226">Deepesh Yadav</a>
+        </div>
+      </div>
+    </div>
+    <div id="card">
+      <div class="firstcard">
+        <h1>Contact Us</h1>
+        <p>
+          <label for="">
+            <input
+              type="text"
+              id="text"
+              name="name"
+              placeholder="Enter Your Name" required
+            />
+          </label>
+        </p>
+        <p>
+          <label for="">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter Valid Email" required
+            />
+          </label>
+        </p>
+        <p>
+          <textarea name="message" id="message" cols="30" rows="10"></textarea>
+        </p>
+        <p>
+          <button>Submit</button>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
