@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nimad Agro</title>
+    <style>
+       * {
+         margin: 0px;
+         padding: 0px;
+         box-sizing: border-box;
+       }
+       body {
+          background-color: white;
+       }
+       #main-header{
+      
+     
+       }
+       #slider {
+         background-color: black;
+         color: white;
+         padding: 7px;
+       }
+       .call {
+         background-color: darkgreen;
+         padding: 6px;
+         color: white;
+       }
+       .call:hover {
+         background-color: rgb(7, 106, 7);
+       }
+       span {
+         margin-left: 15px;
+         background-color: white;
+         border: 2px solid white;
+         color: black;
+         border-radius: 5px;
+         font-size: xx-small;
+         padding: 2px;
+         cursor: pointer;
+       }
+
+       p {
+         float: right;
+         cursor: pointer;
+       }
+       p img{
+        margin-top: -23px;
+       }
+       #search {
+         margin-top: 6px;
+         display: flex;
+       }
+       #logo-1 {
+       }
+       #logo-1:hover {
+         cursor: pointer;
+       }
+       #nimad{
+        margin-top: 0px;
+        margin-right: 10px;
+       }
+       #nimad:hover{
+        
+       }
+       #green-yatra {
+         margin-left: 10px;
+       }
+       #green-yatra:hover {
+         cursor: pointer;
+     
+       }
+       #form {
+         border: 1px solid darkgreen;
+         display: flex;
+         background-color: white;
+         margin-top: 6px;
+         margin-bottom: 15px;
+         width: 100%;
+         
+       }
+       #form input {
+         flex: 1px;
+         border: none;
+         outline: none;
+         background-color: lightgrey;
+         color: black;
+       }
+       #form input:hover{
+        background-color: aliceblue;
+       }
+
+       #form button {
+         background-color: tomato;
+         padding: 5px 50px;
+         border: none;
+         outline: none;
+         color: white;
+       }
+       #form button:hover {
+         background-color: rgb(254, 119, 95);
+         cursor: pointer;
+       }
+       #btn-1 {
+         margin-left: 25px;
+         background-color: orange;
+         color: white;
+         border: none;
+         border-radius: 5px;
+         font-size: x-small;
+         font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+         padding: 3px;
+       }
+       #btn-1:hover {
+         background-color: tomato;
+         cursor: pointer;
+       }
+     
+       #btn {
+         display: flex;
+         width: 900px;
+         padding: 1px;
+         margin: 15px;
+         font-size: larger;
+         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+         background-color: darkgreen;
+         justify-content: center;
+         justify-content: space-evenly;
+       }
+       #btn:hover {
+         background-color: rgb(7, 106, 7);
+         cursor: pointer;
+       }
+
+       .btn-1 {
+         padding: 7px;
+         border: 1px solid grey;
+         background-color: white;
+         margin: 15px 15px;
+         border-radius: 2px;
+         cursor: pointer;
+         box-shadow: 2px 2px 2px 2px lightcyan;
+         border: none;
+  
+         
+  
+       }
+       
+       .btn-2 {
+         padding: 7px;
+         border: none;
+         box-shadow: 2px 2px 2px 2px lightcyan;
+         background-color: white;
+         margin: 15px 15px;
+         border-radius: 2px;
+         cursor: pointer;
+       }
+       .btn-3 {
+         padding: 7px;
+         border: none;
+         box-shadow: 2px 2px 2px 2px lightcyan;
+         background-color: white;
+         margin: 15px 15px;
+         border-radius: 2px;
+         cursor: pointer;
+       }
+       .btn-1:hover {
+         box-shadow: 2px 2px 2px 2px lightgoldenrodyellow;
+       }
+       .btn-2:hover {
+         box-shadow: 2px 2px 2px 2px lightgoldenrodyellow;
+       }
+       .btn-3:hover {
+         box-shadow: 2px 2px 2px 2px lightgoldenrodyellow;
+       }
+       .navbar {
+         background-color: darkgreen;
+       
+       
+       }
+       .navbar:hover {
+         cursor: pointer;
+       }
+  
+.dropbtn {
+  background-color: darkgreen;
+  color: white;
+  padding: 16px;
+  border: none;
+     
+}
+.dropbtn:hover{
+  text-decoration: underline;
+
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+
+}
+
+.dropdown-content {
+  display: none;  
+  position: absolute;
+  min-width: 160px;
+  z-index: 1;
+}
+
+
+.dropdown-content a {
+  background-color: lightgray;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+
+.dropdown-content a:hover {
+  background-color: gray;
+  color: white;
+}
+
+
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {background-color: green;
+color: white;
+}
+       
+.navbar ul li {
+        margin: 5px;
+         padding: 0px;
+         display:  inline-flex;
+     
+
+       }
+       
+.navbar ul li a {
+         justify-content: center;
+         align-items: center;
+         padding: 5px;
+         list-style: none;
+       }
+
+.navbar ul li a:hover {
+         padding: 3px;
+         margin: 3px;
+         border-radius: 5px;
+         color: black;
+         cursor: pointer;
+       }
+       #card {
+         margin-top: 20px;
+         display: flex;
+         justify-content: center;
+         background-color: white;
+         box-shadow: 5px 2px 3px 3px lightgray;
+    
+         
+       }
+       #card:hover {
+        margin-top: 10px;
+         cursor: pointer;
+         background-color: lightgray;
+         box-shadow: 5px 2px 3px 3px rgb(152, 142, 142);
+       }
+       .circle {
+         display: flex;
+         width: 150px;
+         height: 160px;
+         clip-path: circle(41.1% at 50% 50%);
+         justify-content: center;
+       }
+       .maindiv {
+         width: 96%;
+         height: 300px;
+         position: absolute;
+         left: 50%;
+         top: 50%;
+         transform: translate(-50%, -50%);
+         background-size: 100% 100%;
+         box-shadow: 4px 5px 4px 5px rgb(76, 144, 76);
+         border-radius: 4px;
+         animation: slider 10s infinite linear;
+         margin-top: 350px;
+         background-image: url(./Download-2-web-hero-1000x250-eng_1728x.webp\ \(1000×250\)\ -\ Profile\ 1\ -\ Microsoft​\ Edge\ 22-09-2022\ 14_17_55\ \(2\).png);
+         
+       }
+       .maindiv:hover{
+        height: 350px;
+       }
+       @keyframes slider {
+        0%{
+          background-image: url(./Download-2-web-hero-1000x250-eng_1728x.webp\ \(1000×250\)\ -\ Profile\ 1\ -\ Microsoft​\ Edge\ 22-09-2022\ 14_17_55\ \(2\).png);
+        }
+        25%{
+          background-image: url(./images/a-man-spraying-pesticides-into-a-field-of-crops-that-will-be-used-for-food.jpg);
+        }
+        45%{
+          background-image: url(./Download-2-web-hero-1000x250-eng_1728x.webp\ \(1000×250\)\ -\ Profile\ 1\ -\ Microsoft​\ Edge\ 22-09-2022\ 14_17_55\ \(2\).png);
+        }
+        65%{
+          background-image: url(./images/burkina-faso-bobo-dioulasso-market-booth-sale-of-pesticides-fertilizer-GNE3HN.jpg);
+        }
+
+        85%{
+          background-image: url(./Download-2-web-hero-1000x250-eng_1728x.webp\ \(1000×250\)\ -\ Profile\ 1\ -\ Microsoft​\ Edge\ 22-09-2022\ 14_17_55\ \(2\).png);
+        }
+        100%{
+          background-image: url(./images/farmers-spraying-pesticides-rice-fields-56359896.jpg);
+        }
+      }
+       .container {
+         display: flex;
+         margin-top: 450px;
+         justify-content: center;
+         background-color: white;
+       }
+       .container:hover {
+     background-color: lightgray;
+     box-shadow: 5px 2px 3px 3px rgb(152, 142, 142);
+         cursor: pointer;
+       }
+       #first {
+         background-color: black;
+         justify-content: flex-end;
+       }
+       .grey-img {
+         display: flex;
+         width: 150px;
+         height: 150px;
+         clip-path: circle(41.1% at 50% 50%);
+         background-color: black;
+         cursor: pointer;
+       }
+       #h2 {
+         margin-top: 15px;
+         margin-left: 550px;
+         font-size: 30px;
+       }
+       #product {
+         margin-top: 20px;
+         width: 100%;
+         height: 200px;
+         display: flex;
+         background-color: darkgreen;
+         justify-content: center;
+       }
+       #product:hover {
+         background-color: rgb(7, 106, 7);
+         cursor: pointer;
+       }
+       .box {
+         width: auto;
+         height: auto;
+         margin: 5px;
+         padding: 15px 13px;
+       }
+       .box img {
+         box-shadow: 3px 3px 3px 3px white;
+         cursor: pointer;
+       }
+       .box img:hover {
+         box-shadow: 4px 4px 4px 4px lemonchiffon;
+         cursor: pointer;
+       }
+       #border {
+         margin: 3px;
+         display: flex;
+         border-radius: 2px;
+         justify-content: center;
+         width: 90%;
+       }
+       #product img {
+         background-color: aliceblue;
+         border-radius: 2px;
+         width: 150px;
+         height: 150px;
+         cursor: pointer;
+       }
+       #h3 {
+         margin-top: 70px;
+         margin-left: 550px;
+         font-size: 30px;
+
+       }
+       #card-first {
+         display: flex;
+         width: 300px;
+         height: 300px;
+         margin-left: 110px;
+       
+
+       }
+       .first{
+        display: flex;
+       margin-left: 20px;
+
+       }
+       .card-a {
+         display: inline-flex;
+         margin: 20px;
+         padding: 20px;
+         background-color: rgb(100, 159, 100);
+         box-shadow: 5px 5px 5px 5px rgb(7, 106, 7);
+       }
+       .card-a:hover {
+         background-color: whitesmoke;
+         box-shadow: 5px 5px 5px 5px lightgray;
+       }
+       .h4{
+         font-size: 30px;
+         margin-left: 550px;
+       }
+       #card-second {
+        margin: 50px;
+
+       }
+       #card-b{
+      justify-content:center ;
+         display: flex;
+         width: 100%;
+         height: 398px;
+       }
+       .cards {
+         margin: 15px;
+         border-radius: 2px;
+         width: 205px;
+         height: 350px;
+         box-sizing: border-box;
+       
+       }
+       .cards:hover {
+         cursor: pointer;
+       }
+       .cards img {
+         width: 210px;
+         height: 200px;
+         margin-bottom: 30px;
+         border-radius: 2px;
+       }
+       .cards img:hover {
+         cursor: pointer;
+       }
+
+       #card-d{
+        justify-content: center;
+       }
+  
+       #slider-container{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 398px;
+}
+.slider-cards{
+  margin: 15px;
+  border-radius: 2px;
+  width: 205px;
+  height: 350px;
+}
+.slider-cards:hover {
+  cursor: pointer;
+}
+.slider-cards img {
+  margin-top: 15px;
+  width: 150px;
+  height: 200px;
+  margin-left: 30px;
+  border-radius: 2px;
+  margin-bottom: 30px;
+}
+.slider-cards img:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 3px 3px lightgray;
+}
+.slider-cards p{
+ margin: 10px;
+}
+.button{
+ border-radius: 3px;
+ padding: 6px;
+ width: 100%;
+ border: none;
+ background-color: darkgreen;
+ color: white;
+ justify-content: center;
+}
+.button:hover{
+ background-color: rgb(76, 144, 76);
+ border: 1px solid darkblue ;
+}
+
+#banner{
+  display: flex;
+  margin-top: 15px;
+  
+}
+
+.banners{
+  border-radius: 3px;
+  background-color: lightgray;
+  box-shadow: 4px 5px 6px rgb(76, 144, 76),
+  8px 8px 10px rgb(100, 159, 100);
+  display: flex;
+  width: 100%;
+  height: 300px;
+  margin: 8px;
+}
+
+.banners:hover{
+  cursor: pointer;
+}
+
+
+
+
+#card-d{
+  margin: 15px;
+  display: flex;
+}
+
+.banners-1{
+  display: flex;
+  width: 100%;
+  height: 300px;
+  margin: 25px;
+  justify-content: center;
+  background-color: aliceblue;
+  box-shadow: 2px 2px 5px 5px grey;
+}
+
+.h4{
+  margin-top: 25px;
+}
+
+#last-para{
+  height: 423px;
+  width: 100%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: rgb(92, 90, 90);
+  color: white;
+}
+#last-br{
+border: 2px solid white;
+width: 99%;
+margin: 5px;
+border-radius: 2px;
+
+
+}
+.last{
+  margin: 20px;
+  list-style: none;
+}
+
+.form{
+  margin-top: 15px;
+  color: black;
+  height: 480px;
+  background-image: url(./salt-harvesting-g2138d46ff_1920.jpg);
+}
+.form h1{
+margin-left: 40%;
+padding-top: 7px;
+}
+.form h1:hover{
+color: white;
+}
+
+#mt{
+  font-family: cursive;
+  padding: 5px;
+  margin: 15px;
+  background-color: rgb(245, 239, 231);
+  border: 2px solid black;
+  border-radius: 3px;
+  box-shadow: 3px 3px 4px rgb(247, 209, 140);
+}
+#mt:hover{
+  box-shadow: none;
+}
+
+#mt input{
+  padding: 4px;
+  border: none;
+  background-color: lightgray;
+}
+#mt input:hover{
+  background-color: white;
+}
+
+#mt fieldset{
+  height: 90px;
+  border: none;
+  background-color: lightgray;
+}
+
+#sm{
+  margin-top: 15px;
+  margin-left: 40%;
+  background-color: darkgreen;
+  color: white;
+  border: 2px solid black;
+  border-radius: 2px;
+  padding: 8px;
+}
+#sm:hover{
+  background-color: rgb(52, 134, 52);
+  border: 2px solid gray;
+}
+#smr{
+  border-radius: 2px;
+  background-color: blue;
+  color: white;
+  border: 2px solid black;
+  padding: 8px;
+}
+#smr:hover{
+  background-color: rgb(36, 36, 208);
+  border: 2px solid gray;
+}
+#copy{
+  margin-top: 20px;
+  background-color: black;
+  padding: 7px;
+}
+
+#copy span{
+  margin-left: 40%;
+  padding: 4px;
+  background-color: black;
+  color: white;
+  font-size: larger;border: none;
+
+}
+#copy span:hover{
+background-color: white;
+color: black;
+}
+
+</style>
+  </head>
+  <body>
+    <header>
+      <div id="main-header">
+      <div id="slider">
+        <marquee><p>Free Delivery on Orders Above Rs. 499/-&nbsp;</p></marquee>
+      </div>
+      <div class="call">
+        <button id="btn-1">Missed Call To Order:1800-3000-6939</button>
+        <span>Sell On Nimad Agro</span>
+        <span>Bulk Order Inquiries</span>
+        <p>Daily Offer Only on App </p>
+         <p id="play"><a href="https://play.google.com"></a><img src="./Google_Play-Logo.wine.png" alt="" width="100px"></p></div>
+
+      <div id="search">
+        <div id="logo-1">
+          <img src="./Nimadagro.png.jpg" alt="" width="300px" height="90px" />
+        </div>
+        <div id="green-yatra">
+          <img src="./download.png" alt="" width="120px" height="90px" />
+        </div>
+        <div id="nimad">
+          <img src="./time logo.png" alt="" width="140px" height="100px" />
+        </div>
+        <div id="b-1">
+          <div id="btn">
+            <button class="btn-1">Wishlist</button>
+            <button class="btn-2">Login</button>
+            <button class="btn-3">Card</button>
+          </div>
+        </div>
+      </div>
+      <form id="form">
+        <input type="text" id="text" name="text" placeholder="Search" />
+        <button>Search</button>
+      </form>
+    </div>
+      <nav class="navbar">
+        <ul>
+          <div class="dropdown">
+            <button class="dropbtn">Home</button>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">Brands</button>
+            <div class="dropdown-content">
+              <a href="#">MAHYCO</a>
+              <a href="#">SEMINIS</a>
+              <a href="#">NAMDHARI</a>
+              <a href="#">UPL
+               </a>
+              <a href="#"> RIJK ZWAAN
+                </a>
+              <a href="#">SYNGENTA
+               </a>
+              <a href="#"> US AGRI
+               </a>
+              <a href="#"> KNOWN-YOU
+               </a>   
+              <a href="#"> NUNHEMS (BAYERS)
+                </a>
+              <a href="#">I & B SEEDS
+                </a>   
+              <a href="#">TAKII
+                </a>   
+              <a href="#">INDO AMERICAN
+                </a>
+                <a href="#">DUPONT PIONEER</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">Seeds</button>
+            <div class="dropdown-content">
+              <a href="#"><strong>Horticulture</strong></a>
+              <a href="#">FLOWER SEEDS</a>
+              <a href="#">VEGETABLES SEEDS</a>
+              <a href="#">FRUITS</a>
+              <a href="#"><strong>FIELD CROPS</strong></a>
+              <a href="#">   MAIZE/CORN
+               </a>
+              <a href="#"> PADDY
+               </a>
+              <a href="#"> MUSTARD
+                </a>
+                <a href="#">JOWAR
+                </a>
+                <a href="#">COTTON</a>
+            </div>
+          
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">Crop Prodution</button>
+            <div class="dropdown-content">
+              <a href="#"><strong>CHEMICALS</strong></a>
+              <a href="#"> INSECTICIDES
+              </a>
+              <a href="#">  FUNGICIDES
+              </a>
+              <a href="#">  HERBICIDES
+               </a>
+               <a href="#"> BACTERICIDES
+                </a>
+                <a href="#">ACARICIDES/MITICIDES
+                 </a>
+                 <a href="#"> VIEW ALL</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">Crop Nutrients</button>
+            <div class="dropdown-content">
+              <a href="#">MAJOR NUTRIENTS</a>
+              <a href="#">SECONDRY NUTRIENTS</a>
+              <a href="#">GROWTH PROMOTORS</a>
+              <a href="#">GROWTH RETARDANTS</a>
+              <a href="#">ORGANIC FERTILIZERS</a>
+              <a href="#">BIO FERTILIZERS</a>
+              <a href="#">ANTI STRESSINGS AGENTS</a>
+              <a href="#">MICRONUTRIENTS</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">Machinery</button>
+            <div class="dropdown-content">
+              <a href="#"><strong>FARM ACCESSORIES</strong></a>
+              <a href="#">    FARM IMPLEMENTS
+               </a>
+              <a href="#"> FARM MACHINERIES
+              </a>
+              <a href="#">  FARM TOOLS & INSTRUMENTS
+               </a>
+               <a href="#"> GARDEN TOOLS & HAND TOOLS
+              </a>
+              <a href="#">  IRRIGATION KITS
+               </a>
+               <a href="#"> TRACTORS
+                </a>
+                <a href="#">BIOGAS SYSTEM
+                  </a>
+                  <a href="#">OTHERS</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">Segments</button>
+            <div class="dropdown-content">
+              <a href="#">COFEE PLANTATION</a>
+              <a href="#">BANANA PLANTATION</a>
+              <a href="#">URBAN GARDEN</a>
+              <a href="#">ANIMAL FEED</a>
+              <a href="#">HORTICULTURE</a>
+              <a href="#">DAIRY</a>
+              <a href="#">POULTRY</a>
+              <a href="#">POULYHOUSE / PROTECTED FARMING</a>
+            <a href="#">FISHRIES</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">Nimad Agro Services</button>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">Knowledge</button>
+            <div class="dropdown-content">
+              <a href="#">ABOUT SCHEMS / PLANS</a>
+              <a href="#">ARTICLES-BLOGS</a>
+              <a href="#">AGRI TIPS</a>
+              <a href="#">KNOW HOWS</a>
+              <a href="#">AGRI VIDEOS</a>
+              <a href="#">NEWS</a>
+            </div>
+          </div>   
+        </ul>
+      </nav>
+    </header>
+      <div id="card">
+        <div class="circle" id="card-1">
+          <img
+            src="./header img/Offers_Infinito_-Hakone-chilli_2_400x.avif"
+            alt="" 
+          />
+        </div>
+        <div class="circle" id="card-2">
+          <img src="./header img/Circle-Herbicides-204_720x.avif" alt="" />
+        </div>
+        <div class="circle" id="card-3">
+          <img src="./header img/Fungicides_POLYRAM_-BLITOX_720x.avif" alt="" />
+        </div>
+        <div class="circle" id="card-4">
+          <img
+            src="./header img/Growth-Promoters_TAPAS-GROWTH-BOOSTER_-ISABION_720x.avif"
+            alt=""
+          />
+        </div>
+        <div class="circle" id="card-5">
+          <img
+            src="./header img/Insecticides_Phoskill_-Benivia_720x.avif"
+            alt=""
+          />
+        </div>
+        <div class="circle" id="card-6">
+          <img src="./header img/Seeds_Abhilash_-Indus-27_720x.avif" alt="" />
+        </div>
+
+        <div class="circle" id="card-7">
+          <img src="./header img/Circle-Implements-204_720x.avif" alt="" />
+        </div>
+        <div class="circle" id="card-8">
+          <img src="./header img/Circle-KB-204_720x.avif" alt="" />
+        </div>
+      </div>
+    <div id="main">
+      <div class="maindiv"></div>
+    </div>
+    <section>
+      <div>
+        <div class="container">
+          <div class="grey-img" id="first">
+            <img src="./grey/a977e3abffb9451f2d77c41ed07ba316.jpg" alt="" />
+          </div>
+          <div class="grey-img">
+            <img src="./grey/grain-1821656_960_720.jpg" alt="" />
+          </div>
+          <div class="grey-img">
+            <img src="./grey/cow-g13006b98c_1920.jpg" alt="" />
+          </div>
+          <div class="grey-img">
+            <img src="./grey/download.jpeg" alt="" />
+          </div>
+          <div class="grey-img">
+            <img src="./grey/images.png" alt="" />
+          </div>
+
+          <div class="grey-img">
+            <img
+              src="./grey/farmer-man-riding-on-tractor-260nw-2172815435.webp"
+              alt=""
+            />
+          </div>
+          <div class="grey-img">
+            <img src="./grey/a977e3abffb9451f2d77c41ed07ba316.jpg" alt="" />
+          </div>
+          <div class="grey-img">
+            <img src="./grey/istockphoto-175419646-612x612.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <h3 id="h2">Brands</h3>
+    <div id="product">
+      <div id="border">
+        <div class="box">
+          <img src="./brands/logo.png.jpg" alt="" />
+        </div>
+        <div class="box">
+          <img src="./brands/download (3).png" alt="" />
+        </div>
+        <div class="box">
+          <img src="./brands/Syngenta-Logo.png" alt="" />
+        </div>
+        <div class="box">
+          <img src="./brands/download (1).jpeg" alt="" />
+        </div>
+        <div class="box">
+          <img src="./brands/download (1).png" alt="" />
+        </div>
+        <div class="box">
+          <img src="./brands/Godrej-Agrovet-Logo-PNG-1024x541-1.webp" alt="" />
+        </div>
+        <div class="box">
+          <img src="./brands/download (2).png" alt="" />
+        </div>
+        <div class="box">
+          <img src="./brands/dhanukaLogoHome.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <h3 id="h3">Exclusive</h3>
+    <div class="first">
+    <div id="card-first">
+      <div class="card-a" id="card-1">
+        <img
+          src="./Excluse/Exclusive-Tile-550x550-eng_360x.webp (360×360) - Profile 1 - Microsoft​ Edge 22-09-2022 21_17_52.png"
+          alt=""
+        />
+      </div>
+      <div class="card-a" id="card-2">
+        <img
+          src="./Excluse/Exclusive_Tile_11zon_360x.webp (360×360) - Profile 1 - Microsoft​ Edge 22-09-2022 21_17_43.png"
+          alt=""
+        />
+      </div>
+      <div class="card-a" id="card-3">
+        <img
+          src="./Excluse/MicrosoftTeams-image_10_360x.webp (360×360) and 1 more page - Profile 1 - Microsoft​ Edge 22-09-2022 21_18_00.png"
+          alt=""
+        />
+      </div>
+      <div class="card-a" id="card-4">
+        <img
+          src="./Excluse/Spotless_5Min_FB_POST_4_360x.webp (360×360) and 2 more pages - Profile 1 - Microsoft​ Edge 22-09-2022 21_18_08.png"
+          alt=""
+        />
+      </div>
+    </div>
+    </div>
+</div>
+<h3 class="h4">Best Selling</h3>
+<div id="card-b">
+<div class="cards">
+  <img src="./selling/ABHILASH-TOMATO_280x.avif" alt="">
+  <p>ABHILASH TOMATO SEEDS (अभिलाष टमाटर)</p>
+  <br>
+  <br>
+  <strong class="st"> Price: ₹ 1,035 ₹</strong>
+</div>
+<div class="cards">
+  <img src="./selling/AFRICAN-MARIGOLD-DOUBLE-ORANGE_280x.avif" alt="">
+  <p>NS DOUBLE ORANGE (AFRICAN MARIGOLD)</p>
+  <br>
+  <br>
+  <strong class="st">Price: ₹ 609</strong>
+
+</div>
+<div class="cards">
+  <img src="./selling/FMC_Benevia_280x.avif" alt="">
+  <p>BENEVIA INSECTICIDE</p>
+  <br>
+  <br>
+  <strong class="st">Price: ₹ 837</strong>
+</div>
+
+<div class="cards">
+  <img src="./selling/VNR-212-BRINJAL_2_280x.avif" alt="">
+  <p>VNR 212 BRINJAL</p>
+  <br>
+  <br>
+    <strong class="st">Price: ₹130</strong>
+</div>
+<div class="cards">
+  <img src="./selling/yield-booster_280x.avif" alt="">
+  <P>TAPAS TEJ YIELD BOOSTER | BIGHAAT BRAND</P>
+  <strong class="st" >Price: ₹ 649</strong>
+</div>
+</div>
+
+<h3 class="h4">Trending Product</h3>
+<div id="slider-container">
+<div class="slider-cards">
+  <img src="./trending/RICH_b5da978c-2867-48d8-ad84-42881b8ccb54_large.png" alt="">
+  <p>URJA ALL GREEN - PAK CHOI SEEDS</p>
+  <strong>Price: ₹ 300 </strong>
+<br>
+<br>
+  <button class="button">View Product</button>
+</div>
+<div class="slider-cards">
+  <img src="./trending/Radish-ScarletGlobe_large.png" alt="">
+  <p>URJA ALL GREEN - PAK CHOI SEEDS</p>
+  <strong>Price: ₹ 500 </strong>
+  <br>
+  <br>
+  <button class="button">View Product</button>
+</div>
+<div class="slider-cards">
+  <img src="./trending/2120farm_large.png" alt="">
+  <p>URJA ALL GREEN - PAK CHOI SEEDS</p>
+  <strong>Price: ₹ 600 </strong>
+  <br>
+  <br>
+  <button class="button">View Product</button>
+</div>
+
+<div class="slider-cards">
+  <img src="./trending/DIANTHUS_large.jpg" alt="">
+  <p>URJA ALL GREEN - PAK CHOI SEEDS</p>
+  <strong>Price: ₹ 700 </strong>
+  <br>
+  <br>
+  <button class="button">View Product</button>
+</div>
+<div class="slider-cards">
+  <img src="./trending/Lettuce-Iceberg_large.png" alt="">
+  <p>URJA ALL GREEN - PAK CHOI SEEDS</p>
+  <strong>Price: ₹ 800 </strong>
+  <br>
+  <br>
+  <button class="button">View Product</button>
+</div>
+</div>
+<div id="banner">
+
+   <div class="banners" id="banner-1">
+    <img src="./Excluse/MicrosoftTeams-image_10_360x.webp (360×360) and 1 more page - Profile 1 - Microsoft​ Edge 22-09-2022 21_18_00.png" alt="">
+    </div>
+    <div class="banners" id="banner-2">
+      <img src="./Excluse/Mulch-banner-_Series-1-Web-tile-English_540x.webp (426×300) - Profile 1 - Microsoft​ Edge 23-09-2022 14_30_13.png" alt="">
+      </div>
+    <div class="banners" id="banner-3">
+    <img src="./Excluse/Spotless_5Min_FB_POST_4_360x.webp (360×360) and 2 more pages - Profile 1 - Microsoft​ Edge 22-09-2022 21_18_08.png" alt="">
+  </div>
+</div>
+<h3 class="h4">Seasonal</h3>
+<div id="card-d">
+<div class="cards">
+  <img src="./seasnol/EXCEL-MERA-71-HERBICIDE_280x.avif" alt="">
+  <p>EXCEL MERA 71 HERBICIDE</p>
+  <br>
+  <br>
+  <strong class="st"> Price: ₹ 155</strong>
+</div>
+<div class="cards">
+  <img src="./seasnol/FMC_Coragen_280x.avif" alt="">
+  <p>CORAGEN INSECTICIDE</p>
+  <br>
+  <br>
+  <strong class="st">Price: ₹ 176</strong>
+
+</div>
+<div class="cards">
+  <img src="./seasnol/PARAQUATE_280x.webp (275×371) - Profile 1 - Microsoft​ Edge 23-09-2022 15_24_09.png" alt="">
+  <p>REMI CAULIFLOWER SEEDS</p>
+  <strong class="st">Price: ₹ 460</strong>
+</div>
+
+<div class="cards">
+  <img src="./seasnol/REMI-CAULIFLOWER_280x.avif" alt="">
+  <p>ALLQUID HERBICIDE</p>
+  <br>
+  <br>
+    <strong class="st">Price: ₹ 249</strong>
+</div>
+<div class="cards">
+  <img src="./seasnol/Untitleddesign_19_4cca7982-8db2-460b-b96f-eaaae5178b0b_280x.avif" alt="">
+  <P>TAPOS INSECTICIDE</P>
+<br>
+<br>
+  <strong class="st" >Price: ₹ 245</strong>
+</div>
+</div>
+
+<h3 class="h4">Crop Solution</h3>
+<div id="card-d">
+<div class="cards">
+  <img src="./crop solution/UPL_SAAF_Fungicide_280x.avif" alt="">
+  <p>UPL SAAF FUNGICIDE</p>
+  <br>
+  <br>
+  <strong class="st"> Price: ₹ 712</strong>
+</div>
+<div class="cards">
+  <img src="./crop solution/Sempra_280x.avif" alt="">
+  <p>SEMPRA HERBICIDE</p>
+  <br>
+  <br>
+  <strong class="st">Price: ₹ 207</strong>
+
+</div>
+<div class="cards">
+  <img src="./crop solution/Syngenta_Alika_Insecticide_280x.avif" alt="">
+  <p>ALIKA INSECTICIDE</p>
+  <strong class="st">Price: ₹ 312</strong>
+</div>
+
+<div class="cards">
+  <img src="./crop solution/Untitleddesign_28_280x.avif" alt="">
+  <p>PHOSKILL INSECTICIDE</p>
+  <br>
+  <br>
+    <strong class="st">Price: ₹325</strong>
+</div>
+<div class="cards">
+  <img src="./crop solution/Syngenta_Ekalux_280x.avif" alt="">
+  <P>EKALUX INSECTICIDE</P>
+<br>
+<br>
+  <strong class="st" >Price: ₹ 442</strong>
+</div>
+</div>
+
+<div id="banner">
+  <div class="banners-1" id="banner-a">
+   <img src="./banner/FMC-products_English_360x.webp (360×540) - Profile 1 - Microsoft​ Edge 23-09-2022 15_52_59.png" alt="">
+   </div>
+   <div class="banners-1" id="banner-b">
+    <img src="./banner/compressjpgENG-min_1_1_360x.webp (360×540) - Profile 1 - Microsoft​ Edge 23-09-2022 15_52_53.png" alt="">
+     </div>
+   <div class="banners-1" id="banner-c">
+   <img src="./banner/No_Virus_Adaptation_Series-2_English_514b3034-19b3-4b86-a18e-1b353f2495cd_360x.webp (360×540) - Profile 1 - Microsoft​ Edge 23-09-2022 15_53_05.png" alt="">
+ </div>
+ <div class="banners-1" id="banner-d">
+  <img src="./banner/Onion-Seeds_English_360x.webp (360×540) - Profile 1 - Microsoft​ Edge 23-09-2022 15_53_10.png" alt="">
+</div>
+</div>
+
+
+<h3 class="h4">Recently Viewed</h3>
+<div id="card-d">
+<div class="cards">
+  <img src="./recently/ABHILASH-TOMATO_280x.avif" alt="">
+  <p>ABHILASH TOMATO SEEDS (अभिलाष टमाटर) </p>
+  <br>
+  <br>
+  <strong class="st"> Price: ₹ 200</strong>
+</div>
+<div class="cards">
+  <img src="./recently/Acrobat_280x.avif" alt="">
+  <p>Acrobat FUNGICIDE</p>
+  <br>
+  <br>
+  <strong class="st">Price: ₹ 640</strong>
+
+</div>
+<div class="cards">
+  <img src="./recently/ROUNDUP-HERBICIDE_d3e7c96c-0119-46de-89e9-2a7550efb117_280x.avif" alt="">
+  <p> ROUDUP HERBICIDE</p>
+  <strong class="st">Price: ₹ 712</strong>
+</div>
+
+<div class="cards">
+  <img src="./recently/UPL_SAAF_Fungicide_280x.avif" alt="">
+  <p>UPL SAAF FUNGICIDE</p>
+  <br>
+  <br>
+    <strong class="st">Price: ₹ 1035</strong>
+</div>
+<div class="cards">
+  <img src="./recently/V-BIND_280x.avif" alt="">
+  <P> VANPROZ V-BIND (BIO VIRICIDE)</P>
+<br>
+<br>
+  <strong class="st" >Price: ₹ 1305</strong>
+</div>
+</div>
+
+  <div id="last-para">
+  <p><strong>Nimad Agro :</strong>India’s largest Agri Inputs Marketplace Platform providing Agricultural Machinery, Agriculture Equipment, Agricultural Products, Poultry Equipment, Chemical Pesticides, Organic Insecticides, etc. Our clientele includes Farmers, Nurseries, FPOs, NGOs and other Institutional Growers.</p> 
+  <br>
+  <br>
+  <br>
+  <strong>MOST SEARCHED ON Nimad Agro</strong>
+  <br>
+  <br>
+  <div id="last-br">
+    <div class="last">
+  <li>INSECTICIDES: ALIKA| TAFGOR| BENEVIA| CORAGEN| EM 1| AREVA|</li>
+  </div>
+  <div class="last" >
+  <li>FUNGICIDE: UPL SAAF| RIDOMIL GOLD| AMISTAR TOP| BLUE COPPER| NATIVO| ANTRACOL|</li>
+</div>
+<div class="last">
+  <li>HERBICIDE: ROUNDUP| SEMPRA| EXCEL MERA 71| AGIL| SENCOR| GRAMOXONE|</li>
+</div>
+<div class="last">
+  <li>BIO VIRICIDE: GEOLIFE NO VIRUS| VANPROZ V-BIND| VIRO RAZE|</li>
+</div>
+<div class="last">
+  <li>PLANT GROWTH PROMOTERS: PLANOFIX| ISABION SYNGENTA| TABOLI| AMRUTH COTTON GROW| GIBRAX SP 186| ETHREL</li>
+</div>
+<div class="last">
+  <li>Agricultural implements: BALWAAN SHAKTI BATTERY SPRAYER (12X8)| TAPAS 2 IN 1 BATTERY SPRAYER| HECTARE HAND WEEDER - LWS 07| TAPAS DOUBLE PUMP MOTOR | BATTERY SPRAYER 20 LTR (12 V x12 AH)| VINSPIRE PORTABLE POWER SPRAYER|</li>
+</div>
+<div class="last">
+  <li>Seeds: NS DOUBLE ORANGE(AFRICAN MARIGOLD)| ABHILASH TOMATO SEEDS| SAAHO TOMATO SEEDS [TO-3251]| KRISH F CUCUMBER| GREEN FLASH CABBAGE| MORALEDA BEANS | NS 426 TOMATO| SURABHI CORIANDER|</li>
+</div>
+  </div>
+ 
+  <section>
+    <form>
+    <div class="form">
+      <h1>Contact Form</h1>
+      <div id="mt">
+    <label for="name">Name: <input type="text" name="text" id="text" required></label>
+    <label for="name"> Middle Name: <input type="text" name="text" id="text"></label>
+    <label for="name">Last Name: <input type="text" name="text" id="text" required></label>
+  </div>
+  <div id="mt">
+    <label for="radio">Male<input type="radio" name="radio" id="radio" required></label>
+    <label for="radio">Female<input type="radio" name="radio" id="radio" required></label>
+    <label for="radio">Other<input type="radio" name="radio" id="radio" required></label>
+  </div>
+  <div id="mt">
+    <label for="email">Email: <input type="email" name="email" id="email" required></label>
+  </div>
+  <div id="mt">
+    <label for="phone">Phone Number: <input type="text" name="number" id="number" required></label>
+  </div>
+
+  <div id="mt">
+    Message: 
+    <fieldset>
+      <label for="message"><input type="text" name="message" id="message"></label> 
+      </fieldset>
+  </div> 
+  <div>
+    <button id="sm">Submit</button>
+    <button id="smr">Reset</button>
+  </div>
+  </div>
+</form>
+  </section>
+<footer>
+ <div id="copy">
+  <span>
+  Copyright@NimadAgro</span></div> 
+</footer>
+
+  </body>
+</html>
+
