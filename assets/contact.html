@@ -80,7 +80,11 @@
         background-color: darkblue;
         color: white;
       }
-
+      #btn{
+        display: flex;
+        justify-content: center;
+        
+      }
     </style>
   </head>
   <body>
@@ -113,7 +117,7 @@
         </div>
       </div>
       <div class="box">
-        <img src="./linkdin.png" alt="" width="70px" height="60px" />
+        <img src="./linkdin.png" alt="" width="80px" height="60px" />
         <div class="logo">
           <span><b>Linkdin:</b></span><br>
           <a href="https://www.linkedin.com/in/deepesh-yadav-5b5612226">Deepesh Yadav</a>
@@ -144,9 +148,9 @@
           </label>
         </p>
         <p>
-          <textarea name="message" id="message" cols="30" rows="10"></textarea>
+          <textarea name="message" id="message" cols="30" rows="10" placeholder="Type Message"></textarea>
         </p>
-        <p>
+        <p id="btn">
           <button>Submit</button>
         </p>
       </div>
