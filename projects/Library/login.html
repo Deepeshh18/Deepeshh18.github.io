@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Login Page</title>
+    <script>
+        function validate()
+        {
+        var username=document.getElementById("username").value;
+        var password=document.getElementById("Password").value;
+        if(username=="admin"&& password=="user")
+        {
+          alert("login sucesfully");
+          return false;
+        }
+        else{
+          alert("login faild")
+        }
+      }
+      </script>
+      <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-image: url(./abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-52393.webp);
+        }
+        form {
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            padding-top: 200px;
+        }
+        #small{
+            border: 2px solid white;
+            background: rgb(22, 22, 130);
+            color: white;
+            padding: 5px;
+            width: 300px;
+            height: 200px;
+        }
+
+        #small h1{
+            display: flex;
+            justify-content: center;
+
+        }
+        #small p{
+            padding: 10px;
+        }
+        #small input{
+            padding: 6px;
+            border-radius: 5px;
+            width: 260px;
+        }
+        #login{
+            display: flex;
+            justify-content: center;
+            background: blue;
+            padding: 5px;
+            color: white;
+         
+            border: 2px solid white;
+        }
+        #login:hover{
+            background: darkgreen;
+            cursor: pointer;
+        }
+      </style>
+</head>
+<body>
+
+    <form class="Box" action="Loginpage.html" method="POST">
+        <div id="small">
+            <h1>Login</h1>
+            <p>
+        <input type="text"  name="" placeholder="Enter your username" id="username">
+    </p>
+    <p>
+        <input type="text"  name="" placeholder="Enter your Password" id="Password">
+    </p>   
+     <p>
+        <input type="submit" name="" value="Login" id="login"> 
+    </p>
+    </div>
+    </form>
+    
+</body>
+</html>
